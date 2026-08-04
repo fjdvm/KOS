@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KnowledgeOS Notes Editor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#ffdcc2",
+                      "on-primary": "#002681",
+                      "tertiary": "#ffb77b",
+                      "on-tertiary-fixed": "#2e1500",
+                      "on-secondary-fixed": "#191c23",
+                      "primary": "#b7c4ff",
+                      "on-surface": "#e2e1ec",
+                      "on-error-container": "#ffdad6",
+                      "background": "#11131a",
+                      "surface-dim": "#11131a",
+                      "surface-container-high": "#282a32",
+                      "surface": "#11131a",
+                      "secondary-fixed-dim": "#c4c6d0",
+                      "on-primary-container": "#002172",
+                      "on-tertiary": "#4d2700",
+                      "inverse-on-surface": "#2f3038",
+                      "secondary": "#c4c6d0",
+                      "surface-container-low": "#1a1b23",
+                      "on-tertiary-container": "#432100",
+                      "on-primary-fixed": "#001551",
+                      "error-container": "#93000a",
+                      "primary-container": "#6989ff",
+                      "on-secondary": "#2d3038",
+                      "primary-fixed": "#dce1ff",
+                      "secondary-fixed": "#e0e2ec",
+                      "surface-container-lowest": "#0c0e15",
+                      "surface-container": "#1e1f27",
+                      "error": "#ffb4ab",
+                      "on-surface-variant": "#c4c5d6",
+                      "on-secondary-container": "#b3b5be",
+                      "tertiary-container": "#d7790c",
+                      "surface-variant": "#33343d",
+                      "on-error": "#690005",
+                      "outline": "#8e90a0",
+                      "inverse-surface": "#e2e1ec",
+                      "tertiary-fixed-dim": "#ffb77b",
+                      "inverse-primary": "#2b53d0",
+                      "outline-variant": "#444654",
+                      "secondary-container": "#44474f",
+                      "primary-fixed-dim": "#b7c4ff",
+                      "on-background": "#e2e1ec",
+                      "surface-tint": "#b7c4ff",
+                      "on-tertiary-fixed-variant": "#6d3900",
+                      "on-primary-fixed-variant": "#0039b5",
+                      "surface-container-highest": "#33343d",
+                      "surface-bright": "#373941",
+                      "on-secondary-fixed-variant": "#44474f"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "48px",
+                      "sidebar-width": "260px",
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "margin-mobile": "16px",
+                      "canvas-max-width": "1200px",
+                      "command-bar-height": "56px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "page-title": [
+                              "Inter"
+                      ],
+                      "page-title-mobile": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "14px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "page-title": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "page-title-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "34px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "18px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-surface');
+        }
+        
+        .prose-editor h1 {
+            font-size: theme('fontSize.page-title[0]');
+            line-height: theme('fontSize.page-title[1].lineHeight');
+            letter-spacing: theme('fontSize.page-title[1].letterSpacing');
+            font-weight: theme('fontSize.page-title[1].fontWeight');
+            margin-bottom: 24px;
+            color: theme('colors.on-surface');
+        }
+
+        .prose-editor h2 {
+            font-size: theme('fontSize.headline-md[0]');
+            line-height: theme('fontSize.headline-md[1].lineHeight');
+            letter-spacing: theme('fontSize.headline-md[1].letterSpacing');
+            font-weight: theme('fontSize.headline-md[1].fontWeight');
+            margin-top: 32px;
+            margin-bottom: 16px;
+            color: theme('colors.on-surface');
+        }
+
+        .prose-editor p {
+            font-size: theme('fontSize.body-lg[0]');
+            line-height: theme('fontSize.body-lg[1].lineHeight');
+            margin-bottom: 16px;
+            color: theme('colors.on-surface-variant');
+        }
+
+        .prose-editor ul {
+            list-style-type: disc;
+            padding-left: 24px;
+            margin-bottom: 16px;
+            color: theme('colors.on-surface-variant');
+            font-size: theme('fontSize.body-lg[0]');
+            line-height: theme('fontSize.body-lg[1].lineHeight');
+        }
+
+        .slash-menu {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s ease;
+        }
+        .slash-menu.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+      </style>
+</head>
+<body class="flex h-screen overflow-hidden antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-full z-40 flex flex-col p-4 bg-surface dark:bg-surface border-r border-outline-variant dark:border-outline-variant docked full-height left-0 w-[260px] hidden md:flex">
+<!-- Brand -->
+<div class="flex items-center gap-3 mb-8 px-2">
+<div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container font-bold font-body-sm">
+                K
+            </div>
+<div>
+<h1 class="font-headline-sm text-headline-sm font-semibold text-on-surface tracking-tight">KnowledgeOS</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Learning System</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="flex flex-col gap-1 flex-grow">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container transition-colors duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container transition-colors duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">school</span>
+<span>Courses</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container transition-colors duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">account_tree</span>
+<span>Projects</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container transition-colors duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">library_books</span>
+<span>Resources</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-primary dark:text-primary font-bold bg-surface-container-high rounded-lg transition-colors duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">description</span>
+<span>Notes</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container transition-colors duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">bookmarks</span>
+<span>Bookmarks</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container transition-colors duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">quiz</span>
+<span>Flashcards</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container transition-colors duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">calendar_today</span>
+<span>Calendar</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container transition-colors duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">analytics</span>
+<span>Analytics</span>
+</a>
+</div>
+<div class="mt-auto">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container transition-colors duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">settings</span>
+<span>Settings</span>
+</a>
+</div>
+</nav>
+<!-- TopNavBar (Command Bar) -->
+<header class="fixed top-0 right-0 left-0 md:left-[260px] z-30 flex items-center justify-between px-gutter bg-background/80 dark:bg-background/80 backdrop-blur-md border-b border-outline-variant dark:border-outline-variant docked full-width top-0 h-[56px] transition-opacity duration-150">
+<!-- Breadcrumbs / Context -->
+<div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">menu</span>
+<span class="hidden md:inline">Notes</span>
+<span class="hidden md:inline material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-on-surface">Cognitive Load Theory Analysis</span>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-4 text-on-surface-variant">
+<button class="hover:text-on-surface dark:hover:text-on-surface transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+<button class="hover:text-on-surface dark:hover:text-on-surface transition-colors flex items-center justify-center" id="toggle-sidebar">
+<span class="material-symbols-outlined text-[20px]">info</span>
+</button>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 flex pt-[56px] md:pl-[260px] relative w-full h-full overflow-hidden">
+<!-- Editor Canvas -->
+<div class="flex-1 overflow-y-auto w-full h-full pb-32" id="editor-container">
+<div class="max-w-[800px] mx-auto px-margin-mobile md:px-margin-desktop py-12 prose-editor relative">
+<!-- Simulated Editor Content -->
+<h1 class="outline-none empty:before:content-['Untitled'] empty:before:text-outline-variant" contenteditable="true">Cognitive Load Theory Analysis</h1>
+<p class="outline-none empty:before:content-['Start typing...'] empty:before:text-outline-variant" contenteditable="true">Cognitive load theory (CLT) is an instructional design theory that reflects our current knowledge about the human cognitive architecture.</p>
+<h2 class="outline-none" contenteditable="true">Intrinsic vs Extraneous Load</h2>
+<p class="outline-none" contenteditable="true">There are generally considered to be two main types of cognitive load:</p>
+<ul class="outline-none" contenteditable="true">
+<li>Intrinsic load: The inherent difficulty of the material itself.</li>
+<li>Extraneous load: Load generated by the manner in which information is presented to learners.</li>
+</ul>
+<p class="outline-none text-on-surface-variant/50 relative group" contenteditable="true">
+<span class="absolute -left-6 top-0 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-outline-variant text-[18px]">add</span>
+</span>
+                    /
+                </p>
+<!-- Floating Slash Command Menu (Simulated) -->
+<div class="slash-menu absolute top-[350px] left-[50px] w-64 bg-surface border border-outline-variant rounded-xl shadow-2xl overflow-hidden z-50 active">
+<div class="px-3 py-2 text-label-sm font-label-sm text-outline uppercase tracking-wider bg-surface-container-low border-b border-outline-variant">Basic Blocks</div>
+<div class="flex flex-col p-1">
+<button class="flex items-center gap-3 px-2 py-2 w-full text-left rounded-lg hover:bg-surface-container text-on-surface transition-colors group">
+<div class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center bg-surface-container group-hover:bg-surface">
+<span class="material-symbols-outlined text-[18px]">title</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Heading 1</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Big section heading.</div>
+</div>
+</button>
+<button class="flex items-center gap-3 px-2 py-2 w-full text-left rounded-lg hover:bg-surface-container text-on-surface transition-colors group">
+<div class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center bg-surface-container group-hover:bg-surface">
+<span class="material-symbols-outlined text-[18px]">format_list_bulleted</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Bulleted List</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Create a simple bulleted list.</div>
+</div>
+</button>
+<button class="flex items-center gap-3 px-2 py-2 w-full text-left rounded-lg hover:bg-surface-container text-on-surface transition-colors group">
+<div class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center bg-surface-container group-hover:bg-surface">
+<span class="material-symbols-outlined text-[18px]">image</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Image</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Upload or embed with a link.</div>
+</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Metadata Sidebar -->
+<aside class="w-[300px] flex-shrink-0 bg-surface border-l border-outline-variant overflow-y-auto transition-transform duration-300 transform translate-x-0 hidden lg:block" id="metadata-sidebar">
+<div class="p-6 flex flex-col gap-8">
+<!-- Properties -->
+<div>
+<h3 class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-4">Properties</h3>
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">calendar_today</span> Created</span>
+<span class="text-on-surface">Oct 24, 2023</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">update</span> Modified</span>
+<span class="text-on-surface">Just now</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">school</span> Course</span>
+<span class="text-primary hover:underline cursor-pointer">EDPSY 401</span>
+</div>
+</div>
+</div>
+<!-- Tags -->
+<div>
+<h3 class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-4">Tags</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 rounded border border-outline-variant text-label-md font-label-md text-on-surface-variant bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">psychology</span>
+<span class="px-2 py-1 rounded border border-outline-variant text-label-md font-label-md text-on-surface-variant bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">learning-theory</span>
+<span class="px-2 py-1 rounded border border-outline-variant text-label-md font-label-md text-on-surface-variant bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors border-dashed flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">add</span> Add</span>
+</div>
+</div>
+<!-- Backlinks -->
+<div>
+<h3 class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-4">Linked Mentions</h3>
+<div class="flex flex-col gap-2">
+<div class="p-3 rounded-lg border border-outline-variant bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer">
+<div class="font-label-md text-label-md text-on-surface mb-1">Sweller's Original Paper (1988)</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">The initial formulation of [[Cognitive Load Theory Analysis]] focused primarily on problem-solving...</div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</main>
+<script>
+        // Simple script to toggle metadata sidebar
+        const toggleBtn = document.getElementById('toggle-sidebar');
+        const sidebar = document.getElementById('metadata-sidebar');
+        
+        if(toggleBtn && sidebar) {
+            toggleBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body></html>

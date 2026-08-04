@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings - KnowledgeOS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#ffdcc2",
+                      "on-primary": "#002681",
+                      "tertiary": "#ffb77b",
+                      "on-tertiary-fixed": "#2e1500",
+                      "on-secondary-fixed": "#191c23",
+                      "primary": "#b7c4ff",
+                      "on-surface": "#e2e1ec",
+                      "on-error-container": "#ffdad6",
+                      "background": "#11131a",
+                      "surface-dim": "#11131a",
+                      "surface-container-high": "#282a32",
+                      "surface": "#11131a",
+                      "secondary-fixed-dim": "#c4c6d0",
+                      "on-primary-container": "#002172",
+                      "on-tertiary": "#4d2700",
+                      "inverse-on-surface": "#2f3038",
+                      "secondary": "#c4c6d0",
+                      "surface-container-low": "#1a1b23",
+                      "on-tertiary-container": "#432100",
+                      "on-primary-fixed": "#001551",
+                      "error-container": "#93000a",
+                      "primary-container": "#6989ff",
+                      "on-secondary": "#2d3038",
+                      "primary-fixed": "#dce1ff",
+                      "secondary-fixed": "#e0e2ec",
+                      "surface-container-lowest": "#0c0e15",
+                      "surface-container": "#1e1f27",
+                      "error": "#ffb4ab",
+                      "on-surface-variant": "#c4c5d6",
+                      "on-secondary-container": "#b3b5be",
+                      "tertiary-container": "#d7790c",
+                      "surface-variant": "#33343d",
+                      "on-error": "#690005",
+                      "outline": "#8e90a0",
+                      "inverse-surface": "#e2e1ec",
+                      "tertiary-fixed-dim": "#ffb77b",
+                      "inverse-primary": "#2b53d0",
+                      "outline-variant": "#444654",
+                      "secondary-container": "#44474f",
+                      "primary-fixed-dim": "#b7c4ff",
+                      "on-background": "#e2e1ec",
+                      "surface-tint": "#b7c4ff",
+                      "on-tertiary-fixed-variant": "#6d3900",
+                      "on-primary-fixed-variant": "#0039b5",
+                      "surface-container-highest": "#33343d",
+                      "surface-bright": "#373941",
+                      "on-secondary-fixed-variant": "#44474f"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "48px",
+                      "sidebar-width": "260px",
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "margin-mobile": "16px",
+                      "canvas-max-width": "1200px",
+                      "command-bar-height": "56px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "page-title": [
+                              "Inter"
+                      ],
+                      "page-title-mobile": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "14px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "page-title": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "page-title-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "34px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "18px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+          body {
+              font-family: 'Inter', sans-serif;
+              background-color: #11131a; /* bg-background */
+              color: #e2e1ec; /* text-on-background */
+          }
+          
+          /* Custom Scrollbar for sleekness */
+          ::-webkit-scrollbar {
+              width: 8px;
+              height: 8px;
+          }
+          ::-webkit-scrollbar-track {
+              background: transparent;
+          }
+          ::-webkit-scrollbar-thumb {
+              background: #33343d; /* surface-variant */
+              border-radius: 4px;
+          }
+          ::-webkit-scrollbar-thumb:hover {
+              background: #444654; /* outline-variant */
+          }
+      </style>
+</head>
+<body class="bg-background text-on-background overflow-x-hidden min-h-screen">
+<!-- SideNavBar (Shared Component) -->
+<nav class="fixed left-0 top-0 h-full z-40 flex flex-col p-4 bg-surface dark:bg-surface border-r border-outline-variant dark:border-outline-variant w-[260px] transition-all duration-200 ease-in-out hidden md:flex">
+<!-- Brand/Header -->
+<div class="flex items-center gap-3 mb-8 px-2">
+<div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container font-headline-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">terminal</span>
+</div>
+<div>
+<h1 class="font-headline-sm text-headline-sm font-semibold text-on-surface">KnowledgeOS</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Learning System</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="dashboard">dashboard</span>
+<span class="font-body-md text-body-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="school">school</span>
+<span class="font-body-md text-body-md">Courses</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="account_tree">account_tree</span>
+<span class="font-body-md text-body-md">Projects</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="library_books">library_books</span>
+<span class="font-body-md text-body-md">Resources</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="description">description</span>
+<span class="font-body-md text-body-md">Notes</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="bookmarks">bookmarks</span>
+<span class="font-body-md text-body-md">Bookmarks</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="quiz">quiz</span>
+<span class="font-body-md text-body-md">Flashcards</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="calendar_today">calendar_today</span>
+<span class="font-body-md text-body-md">Calendar</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" data-icon="analytics">analytics</span>
+<span class="font-body-md text-body-md">Analytics</span>
+</a>
+<!-- Active State -->
+<a class="flex items-center gap-3 px-3 py-2 text-primary dark:text-primary font-bold bg-surface-container-high rounded-lg group" href="#">
+<span class="material-symbols-outlined" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-body-md text-body-md">Settings</span>
+</a>
+</div>
+<!-- User Profile Avatar (Bottom) -->
+<div class="mt-auto pt-4 border-t border-outline-variant">
+<div class="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-surface-container cursor-pointer transition-colors">
+<img alt="User profile avatar" class="w-8 h-8 rounded-full object-cover border border-outline-variant" data-alt="A small, circular avatar portrait of a user in a minimalist dark UI setting, professional and sleek." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf1tYKweT6uCRHyTzTlfDDAB8dfui0ju8qM2NvXWUJncqYQkq2iQSTkSRu-cDrYT-1PoPmVzSDuHpGWo2PMBNdJWd-16yP9Sb-9wgeefpdWbPtxPyZeE9300VEO3vI9BUKRLgNxFXvPrUxJmhFrDpCb8Ae8v1UMpjeEA3exgtA4fGinLhJU_QimfyM4IYk-JvRLVghw14U3Ylsdw5GcFlv12QIdkZLrmH-HTT0c6ElO1JgkXFlCeJJuQ"/>
+<div class="flex-1 min-w-0">
+<p class="font-label-md text-label-md text-on-surface truncate">Jane Doe</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">jane@knowledge.os</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm">unfold_more</span>
+</div>
+</div>
+</nav>
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 right-0 left-0 md:left-[260px] z-30 flex items-center justify-between px-gutter bg-background/80 dark:bg-background/80 backdrop-blur-md border-b border-outline-variant dark:border-outline-variant h-[56px] transition-opacity duration-150">
+<!-- Search Bar / Left Side -->
+<div class="flex items-center flex-1">
+<button class="md:hidden mr-4 text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="relative w-full max-w-md hidden md:block group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant group-focus-within:text-primary transition-colors text-sm" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-md py-1.5 pl-9 pr-4 font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary placeholder:text-on-surface-variant/50 transition-all" placeholder="Search KnowledgeOS..." type="text"/>
+<div class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
+<kbd class="hidden sm:inline-block border border-outline-variant rounded px-1.5 font-sans text-[10px] text-on-surface-variant bg-surface-container">⌘</kbd>
+<kbd class="hidden sm:inline-block border border-outline-variant rounded px-1.5 font-sans text-[10px] text-on-surface-variant bg-surface-container">K</kbd>
+</div>
+</div>
+<!-- Breadcrumb for current section context -->
+<div class="hidden lg:flex items-center ml-6 gap-2 text-on-surface-variant font-label-md text-label-md">
+<span>System</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-on-surface">Settings</span>
+</div>
+</div>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface transition-colors relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full border border-background"></span>
+</button>
+<button class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-[56px] md:pl-[260px] min-h-screen">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-8 md:py-12">
+<!-- Page Header -->
+<div class="mb-10">
+<h2 class="font-page-title-mobile md:font-page-title text-page-title-mobile md:text-page-title text-on-surface tracking-tight">Settings</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2 max-w-2xl">Manage your account preferences, appearance, notifications, and connected integrations.</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-12">
+<!-- Settings Sidebar Layout -->
+<aside class="w-full lg:w-64 shrink-0">
+<nav class="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 hide-scrollbar" style="-ms-overflow-style: none; scrollbar-width: none;">
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-md bg-surface-container-high text-primary font-label-md text-label-md whitespace-nowrap lg:whitespace-normal transition-colors border border-outline-variant/30" href="#account">
+<span class="material-symbols-outlined text-[18px]">person</span>
+                            Account
+                        </a>
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md whitespace-nowrap lg:whitespace-normal transition-colors" href="#appearance">
+<span class="material-symbols-outlined text-[18px]">palette</span>
+                            Appearance
+                        </a>
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md whitespace-nowrap lg:whitespace-normal transition-colors" href="#notifications">
+<span class="material-symbols-outlined text-[18px]">notifications_active</span>
+                            Notifications
+                        </a>
+<a class="flex items-center gap-3 px-4 py-2.5 rounded-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md whitespace-nowrap lg:whitespace-normal transition-colors" href="#integrations">
+<span class="material-symbols-outlined text-[18px]">extension</span>
+                            Integrations
+                        </a>
+</nav>
+</aside>
+<!-- Settings Content Area -->
+<div class="flex-1 max-w-3xl space-y-12">
+<!-- Account Section -->
+<section class="scroll-mt-24" id="account">
+<div class="mb-6 pb-4 border-b border-outline-variant/50 flex justify-between items-end">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Profile</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Update your personal information and public profile details.</p>
+</div>
+</div>
+<div class="bg-surface border border-outline-variant rounded-lg overflow-hidden flex flex-col sm:flex-row p-6 gap-8">
+<div class="flex flex-col items-center gap-4 shrink-0">
+<img alt="Profile Picture" class="w-24 h-24 rounded-full object-cover border-2 border-surface-container-high bg-surface-container-low" data-alt="A close-up of a user profile picture avatar placeholder, sleek dark mode styling, subtle lighting, no specific face, generic elegant silhouette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS55wzpe-oJDYIS4hdTnZi5Xe6P-TM_zS78f8tZIeYQcWt_76LOsNJaeAbSPXjGulSiz04EaOIAYMjv9m5KkWdX9Sx46ahNUYFkSj6MGcbCRIiHwYv-HI9NNiNA-5z0HydYCt6-nXPZZDBgfR65VbhxjLuZnH4Swxyvxsn3nN2utVYYIlpI2uvudG7U0UdRmnex0i20r0shNX3Jo1AmNnsfUZOf5RSP3TlQHM1VuOo0rlxJUDI9RE1XQ"/>
+<button class="font-label-sm text-label-sm px-3 py-1.5 rounded bg-surface-container-high border border-outline-variant hover:bg-surface-variant text-on-surface transition-colors">Change Avatar</button>
+</div>
+<div class="flex-1 space-y-5">
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md text-on-surface block" for="display-name">Display Name</label>
+<input class="w-full bg-transparent border-b border-outline-variant pb-2 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary transition-colors rounded-none px-0" id="display-name" type="text" value="Jane Doe"/>
+</div>
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md text-on-surface block" for="email">Email Address</label>
+<input class="w-full bg-transparent border-b border-outline-variant pb-2 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary transition-colors rounded-none px-0" id="email" type="email" value="jane@knowledge.os"/>
+</div>
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md text-on-surface block" for="bio">Short Bio</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant rounded-md p-3 font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none placeholder:text-on-surface-variant/50" id="bio" placeholder="Tell us a bit about yourself..." rows="2"></textarea>
+</div>
+</div>
+</div>
+<!-- Danger Zone -->
+<div class="mt-8 border border-error-container/30 rounded-lg p-6 bg-error-container/5 relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-error"></div>
+<h4 class="font-headline-sm text-headline-sm text-error mb-2">Danger Zone</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Permanently delete your account and all of your content.</p>
+<button class="font-label-md text-label-md px-4 py-2 rounded bg-transparent border border-error text-error hover:bg-error/10 transition-colors">Delete Account</button>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+</body></html>
