@@ -1,6 +1,5 @@
 <p align="center">
   <img src="./public/kos-logo.png" alt="KnowledgeOS logo" width="160" />
-</p>
 
 <h1 align="center">KnowledgeOS</h1>
 
@@ -27,6 +26,4 @@ Install dependencies from the repository root:
 ```sh
 pnpm install
 ```
-
-Common workspace commands depend on the app or package you are working in. Check the package-level `package.json` files for the available scripts.
->>>>>>> 635409c (init commit)
+</p>
