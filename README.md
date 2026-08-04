@@ -4,6 +4,7 @@
 <h1 align="center">KnowledgeOS</h1>
 
 A personal command center for everything you're learning.
+</p>
 
 ## Workspace
 
@@ -26,4 +27,3 @@ Install dependencies from the repository root:
 ```sh
 pnpm install
 ```
-</p>
