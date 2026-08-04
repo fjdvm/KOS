@@ -1,10 +1,10 @@
-<p align="center">
+<div align="center">
   <img src="./public/kos-logo.png" alt="KnowledgeOS logo" width="160" />
 
 <h1 align="center">KnowledgeOS</h1>
 
 - A personal command center for everything you're learning.
-</p>
+</div>
 
 ## Workspace
 
