@@ -49,11 +49,7 @@ export default function SignInPage() {
     <div className="flex min-h-screen items-center justify-center bg-[#0F1115] px-4">
       <div className="w-full max-w-md border border-[#2A313D] bg-[#171A21] p-8 rounded-xl shadow-2xl animate-fade-in">
         <div className="flex flex-col items-center mb-8">
-          <div className="h-12 w-12 rounded-lg bg-[#b7c4ff]/10 flex items-center justify-center text-[#b7c4ff] border border-[#b7c4ff]/20 mb-4">
-            <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-            </svg>
-          </div>
+          <img src="/kos-logo.png" alt="KnowledgeOS Logo" className="h-12 w-auto object-contain mb-4" />
           <h1 className="text-2xl font-bold text-[#e2e1ec] tracking-tight">Welcome back</h1>
           <p className="text-sm text-[#c4c5d6] mt-1">Sign in to your Workspace</p>
         </div>
