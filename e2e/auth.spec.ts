@@ -30,7 +30,7 @@ test.describe('Authentication and Workspace Shell E2E Journey', () => {
     await expect(page.locator('text=Welcome back, Ada')).toBeVisible();
     await expect(page.locator('text=0 Day Streak')).toBeVisible();
     await expect(page.locator('text=Today\'s Learning Focus')).toBeVisible();
-    await expect(page.locator('aside')).toBeVisible();
+    await expect(page.locator('[data-slot="sidebar"]')).toBeVisible();
     await expect(page.locator('header')).toBeVisible();
 
     // 6. Sign Out
