@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-# KnowledgeOS
-A personal command center for everything you're learning.
-=======
 <p align="center">
   <img src="./public/kos-logo.png" alt="KnowledgeOS logo" width="160" />
 </p>
 
 <h1 align="center">KnowledgeOS</h1>
 
-KnowledgeOS is a monorepo for building the KOS platform, with apps, shared packages, and workspace tooling organized for a pnpm and Turborepo workflow.
+A personal command center for everything you're learning.
 
 ## Workspace
 
