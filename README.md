@@ -3,7 +3,7 @@
 
 <h1 align="center">KnowledgeOS</h1>
 
-- A personal command center for everything you're learning.
+A personal command center for everything you're learning.
 </div>
 
 ## Workspace
